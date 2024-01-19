@@ -4,12 +4,11 @@ int main() {
     int a = 5;
     int b = 6;
     int c = 7;
-    int temp1, temp2;
-    temp1 = b;
+
+    int temp = b;
     b = a;
-    temp2 = c;
-    c = temp1;
-    a = temp2;
+    a = c;
+    c = temp;
 
     cout << a << endl;
     cout << b << endl;
