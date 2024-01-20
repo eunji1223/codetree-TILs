@@ -9,7 +9,7 @@ int main() {
     if(b > a){
         int temp = a;
         a = b;
-        b = a;
+        b = temp;
     }
     cout << a-b;
     return 0;
