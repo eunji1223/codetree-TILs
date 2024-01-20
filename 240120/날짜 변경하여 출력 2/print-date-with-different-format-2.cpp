@@ -7,6 +7,6 @@ int main() {
 
     cin >> m >> n >> d >> n >> y;
 
-    cout >> y >> "." >> m >> "." >> d;
+    cout << y << "." << m << "." << d;
     return 0;
 }
