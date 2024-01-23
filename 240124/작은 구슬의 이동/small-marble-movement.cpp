@@ -24,7 +24,7 @@ int main() {
     char dir;
     int dirn;
 
-    int dirx[] = { 0, -1, 0, 1};
+    int dirx[] = { 0, 1, 0, -1};
     int diry[] = { 1, 0, -1, 0};
 
     cin >> n >> t;
@@ -42,7 +42,6 @@ int main() {
             x += dirx[dirn];
             y += diry[dirn];
         }
-        //cout << "t : " << i << "(" << x << ", " << y << ")" << endl;
     }
 
     cout << x+1 << " " << y+1;
