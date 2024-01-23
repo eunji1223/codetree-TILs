@@ -37,11 +37,12 @@ int main() {
     for(int i=0; i<t; i++){
         x += dirx[dirn];
         y += diry[dirn];
-        if(x < 0 || y < 0 || x >= n || y >= n){
+        if(x < 0 || y < 0 || x > (n-1) || y > (n-1)){
             dirn = (dirn + 2) % 4;
             x += dirx[dirn];
             y += diry[dirn];
         }
+        //cout << "t : " << i << "(" << x << ", " << y << ")" << endl;
     }
 
     cout << x+1 << " " << y+1;
