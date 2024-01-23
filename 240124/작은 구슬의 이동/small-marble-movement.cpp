@@ -37,7 +37,7 @@ int main() {
     for(int i=0; i<t; i++){
         x += dirx[dirn];
         y += diry[dirn];
-        if(x == -1 || y == -1){
+        if(x < 0 || y < 0 || x >= n || y >= n){
             dirn = (dirn + 2) % 4;
             x += dirx[dirn];
             y += diry[dirn];
