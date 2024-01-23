@@ -17,7 +17,7 @@ int main() {
 
     int arr[n][m];
 
-    fill(&arr[0][0], &arr[n-1][m-1], 0);
+    fill(&arr[0][0], &arr[n-1][m], 0);
 
     for(int i=1; i<(n*m+1); i++){
         arr[x][y] = i;
