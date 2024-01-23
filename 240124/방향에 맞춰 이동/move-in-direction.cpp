@@ -10,30 +10,23 @@ int main() {
 
     cin >> total;
 
-    int dirx[] = {1, 0, -1, 0};
-    int diry[] = {0, -1, 0, 1};
-
     for(int i=0; i<total; i++){
         char dir;
         int count;
-        int num;
         cin >> dir >> count;
 
         if(dir == 'E'){
-            num = 0;
+            x += count;
         }
         else if(dir == 'S'){
-            num = 1;
+            y -= count;
         }
         else if(dir == 'W'){
-            num = 2;
+            x -= count;
         }
         else if(dir == 'N'){
-            num = 3;
+            y += count;
         }
-
-        x += dirx[num] * count;
-        y += diry[num] * count;
     }
 
     cout << x << " " << y;
