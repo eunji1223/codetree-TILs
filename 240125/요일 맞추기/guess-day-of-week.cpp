@@ -23,12 +23,12 @@ int main() {
 
     int result; 
     if((day2-day1)<0){
-        result = day1-day2+5;
+        result = 7-((day1-day2)%7);
     }
     else{
-        result = day2-day1;
+        result = (day2-day1)%7;
     }
-    cout << day[result%7];
+    cout << day[result];
     
     return 0;
 }
