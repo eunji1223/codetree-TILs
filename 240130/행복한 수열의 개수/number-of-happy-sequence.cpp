@@ -25,6 +25,12 @@ int main() {
             }
             else{
                 recnum = arr[i][j+1];
+                if(maxSeq >= m){
+                    mcount++;
+                }
+                else{
+                    maxSeq = 1;
+                }
             }
         }
 
@@ -36,13 +42,13 @@ int main() {
             }
             else{
                 recNumCol = arr[k+1][i];
+                if(maxSeqCol >= m){
+                    mcount++;
+                }
+                else{
+                    maxSeq = 1;
+                }
             }
-        }
-        if(maxSeq >= m){
-            mcount++;
-        }
-        if(maxSeqCol >= m){
-            mcount++;
         }
     }
 
