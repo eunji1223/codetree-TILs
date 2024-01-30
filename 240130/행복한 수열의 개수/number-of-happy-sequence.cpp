@@ -24,16 +24,20 @@ int main() {
                 maxSeq += 1;
             }
             else{
-                recnum = arr[i][j+1];
                 if(maxSeq >= m){
                     mcount++;
                 }
                 else{
                     maxSeq = 1;
                 }
+                recnum = arr[i][j+1];
             }
         }
 
+        if(maxSeq >= m){
+            mcount++;
+        }
+        
         int maxSeqCol = 1;
         int recNumCol = arr[0][i];
         for(int k=0; k<n-1; k++){
@@ -49,6 +53,9 @@ int main() {
                     maxSeq = 1;
                 }
             }
+        }
+        if(maxSeqCol >= m){
+            mcount++;
         }
     }
 
