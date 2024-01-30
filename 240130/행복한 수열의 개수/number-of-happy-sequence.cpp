@@ -26,6 +26,7 @@ int main() {
             else{
                 if(maxSeq >= m){
                     mcount++;
+                    break;
                 }
                 else{
                     maxSeq = 1;
@@ -48,6 +49,7 @@ int main() {
                 recNumCol = arr[k+1][i];
                 if(maxSeqCol >= m){
                     mcount++;
+                    break;
                 }
                 else{
                     maxSeq = 1;
