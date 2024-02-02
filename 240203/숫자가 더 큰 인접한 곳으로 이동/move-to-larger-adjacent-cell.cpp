@@ -29,7 +29,7 @@ int main() {
         max = grid[curr_r][curr_c];
         curr = max;
         for(int i=0; i<4; i++){
-            if(grid[curr_r+dx[i]][curr_c+dy[i]] > max){
+            if(grid[curr_r+dx[i]][curr_c+dy[i]] > max && curr_r+dx[i] > 0 && curr_c+dy[i] > 0 ){
                 max = grid[curr_r+dx[i]][curr_c+dy[i]];
                 curr_r = curr_r + dx[i];
                 curr_c = curr_c + dy[i];
