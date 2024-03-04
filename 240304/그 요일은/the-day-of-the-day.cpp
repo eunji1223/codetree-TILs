@@ -23,7 +23,7 @@ int main() {
     int day1 = returndays(m1, d1);
     int day2 = returndays(m2, d2);
     
-    int inputidx;
+    int inputidx, day1idx, day2idx;
     for(int i=0; i<7; i++){
         if(inputday == day[i]){
             inputidx = i;
@@ -37,6 +37,8 @@ int main() {
         result += 1;
     }
 
+    day1 += 7-(day1%7);
+    day2 -= day2%7;
     result += (day2-day1)/7;
 
     cout << result;
