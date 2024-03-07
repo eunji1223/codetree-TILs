@@ -6,22 +6,24 @@ int count(int a, int b){
     for(int i=a; i<=b; i++){
         if(i%3==0){
             cnt++;
-            continue;
         }
-        int num = i;
-        while(true){
-            if(num<10){
-                if(num%3==0){
-                    cnt++;
+        else{
+            int num = i;
+            while(true){
+                if(num<10){
+                    if(num%3==0){
+                        cnt++;
+                    }
+                    break;
                 }
-                break;
+                if((num%10)%3==0){
+                    cnt++;
+                    break;
+                }
+                num/=10;
             }
-            if((num%10)%3==0){
-                cnt++;
-                break;
-            }
-            num/=10;
         }
+        
     }
     return cnt;
 }
