@@ -5,6 +5,7 @@ int count(int a, int b){
     int cnt = 0;
     for(int i=a; i<=b; i++){
         if(i%3==0){
+            cout << i << " ";
             cnt++;
         }
         else{
@@ -12,12 +13,14 @@ int count(int a, int b){
             while(true){
                 if(num<10){
                     if(num%3==0){
+                        cout << i << " ";
                         cnt++;
                     }
                     break;
                 }
                 if((num%10)%3==0){
                     cnt++;
+                    cout << i << " ";
                     break;
                 }
                 num/=10;
