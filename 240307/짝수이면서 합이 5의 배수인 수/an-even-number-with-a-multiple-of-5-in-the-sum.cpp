@@ -2,7 +2,7 @@
 using namespace std;
 
 bool isSumFive(int n){
-    return (((n/10 + n%10)%10) == 0);
+    return (((n/10 + n%10)%5) == 0);
 }
 
 bool isEven(int n){
