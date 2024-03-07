@@ -11,12 +11,12 @@ int count(int a, int b){
             int num = i;
             while(true){
                 if(num<10){
-                    if(num%3==0){
+                    if(num%3==0 && num!=0){
                         cnt++;
                     }
                     break;
                 }
-                if((num%10)%3==0){
+                if((num%10)%3==0 && (num%10)!=0){
                     cnt++;
                     break;
                 }
