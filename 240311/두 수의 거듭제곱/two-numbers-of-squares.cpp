@@ -4,7 +4,7 @@ using namespace std;
 int calculator(int a, int b){
     int res=1;
     for(int i=0; i<b; i++){
-        res *= sum;
+        res *= a;
     }
     return res;
 }
