@@ -17,7 +17,7 @@ int main(){
     int n;
     cin >> n;
 
-    for(int i=0; i<4; i++){
+    for(int i=0; i<n; i++){
         char dir;
         int dir_num, dist;
         cin >> dir >> dist;
