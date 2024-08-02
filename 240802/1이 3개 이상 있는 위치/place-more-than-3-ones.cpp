@@ -11,6 +11,7 @@ bool InRange(int x, int y, int n){
 
 int Count(int x, int y, int n){
     int count=0;
+    // 4방향으로 설정하는 것 주의
     for(int i=0; i<4; i++){
         int nx = x + dx[i];
         int ny = y + dy[i];
