@@ -11,7 +11,7 @@ bool InRange(int x, int y, int n){
 
 int Count(int x, int y, int n){
     int count=0;
-    for(int i=0; i<n; i++){
+    for(int i=0; i<4; i++){
         int nx = x + dx[i];
         int ny = y + dy[i];
         if(InRange(nx, ny, n) && arr[nx][ny] == 1){
