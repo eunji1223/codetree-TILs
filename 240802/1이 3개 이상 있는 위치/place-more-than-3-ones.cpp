@@ -32,7 +32,7 @@ int main() {
     for(int i=0; i<n; i++){
         for(int j=0; j<n; j++){
             if(Count(i, j, n) >= 3)
-                result += 1;
+                result++;
         }
     }
 
