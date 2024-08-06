@@ -10,6 +10,10 @@ int arr_simulate[MaxGrid][MaxGrid] = {0, };
 int dx[4] = { -1, 1, 0, 0};
 int dy[4] = { 0, 0, -1, 1};
 
+bool InRange(int row, int col, int n){
+    return (row >= 0 && row < n && col >= 0 && col < n);
+}
+
 void Simulation(int n){
     for(int i=0; i<n; i++){
         for(int j=0; j<n; j++){
@@ -17,16 +21,14 @@ void Simulation(int n){
                 int max = -1;
                 int row = i, col = j;
                 for(int k=0; k<4; k++){
-                    if(arr[i+dx[k]][j+dy[k]] > max){
+                    if(InRange(i+dx[k], j+dy[k], n) && arr[i+dx[k]][j+dy[k]] > max){
                         max = arr[i+dx[k]][j+dy[k]];
                         row = i + dx[k];
                         col = j + dy[k];
                     }
                 }
-                if(max != arr[i][j]){
-                    arr_simulate[i][j]--;
-                    arr_simulate[row][col]++;
-                }
+                arr_simulate[i][j]--;
+                arr_simulate[row][col]++;
             }
         }
     }
