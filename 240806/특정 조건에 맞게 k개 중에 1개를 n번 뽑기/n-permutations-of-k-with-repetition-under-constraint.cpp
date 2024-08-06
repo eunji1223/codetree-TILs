@@ -25,7 +25,8 @@ void Choose(int curr_num){
             numbers.pop_back();
         }
         else{
-            auto it1 = --numbers.end();
+            // end()는 요소가 들어갈 자리를 반환함으로 --를 해야지만 리스트에 들어있는 마지막 원소를 가리킴
+            auto it1 = --numbers.end();  
             auto it2 = it1;
             --it2;
 
