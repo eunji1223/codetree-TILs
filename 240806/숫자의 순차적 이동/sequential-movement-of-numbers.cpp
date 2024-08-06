@@ -46,8 +46,8 @@ int main() {
         }
     }
 
-    int num = 1;
     for(int t=0; t<m; t++){
+        int num = 1;
         while(num <= n*n){
             tuple<int, int> position = GetPosition(num);
             int row = get<0>(position);
