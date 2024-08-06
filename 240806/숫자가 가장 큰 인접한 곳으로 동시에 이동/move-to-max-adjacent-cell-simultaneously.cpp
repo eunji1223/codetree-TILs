@@ -14,7 +14,7 @@ void Simulation(int n){
     for(int i=0; i<n; i++){
         for(int j=0; j<n; j++){
             if(arr_recent[i][j] == 1){
-                int max = arr[i][j];
+                int max = -1;
                 int row = i, col = j;
                 for(int k=0; k<4; k++){
                     if(arr[i+dx[k]][j+dy[k]] > max){
@@ -24,7 +24,7 @@ void Simulation(int n){
                     }
                 }
                 if(max != arr[i][j]){
-                    arr_simulate[i][j] = 0;
+                    arr_simulate[i][j]--;
                     arr_simulate[row][col]++;
                 }
             }
