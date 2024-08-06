@@ -7,6 +7,10 @@ int dx[4] = { -1, 1, 0, 0};
 int dy[4] = { 0 , 0, -1, 1};
 int arr[MaxGrid][MaxGrid] = {0, };
 
+bool InRange(int row, int col, int n){
+    return (row >= 0 && row < n && col >= 0 && col < n);
+}
+
 int main() {
     int n, r, c;
     cin >> n >> r >> c;
@@ -26,7 +30,7 @@ int main() {
         int max = arr[r][c];
         int nr, nc;
         for(int i=0; i<4; i++){
-            if(arr[r+dx[i]][c+dy[i]] > max){
+            if(InRange(r+dx[i], c+dy[i], n) && arr[r+dx[i]][c+dy[i]] > max){
                 max = arr[r+dx[i]][c+dy[i]];
                 nr = r + dx[i];
                 nc = c + dy[i];
@@ -35,7 +39,7 @@ int main() {
         }
 
         if(arr[r][c] == max){
-            break;
+            isEnd = true;
         }
         else{
             r = nr;
