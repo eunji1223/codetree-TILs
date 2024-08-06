@@ -21,12 +21,16 @@ void Simulation(int n){
                         max = arr[row][col];
                         arr_simulate[i][j] = 0;
                         arr_simulate[row][col] += 1;
-                        if(arr_simulate[row][col] > 1){
-                            arr_simulate[row][col] = 0;
-                        }
                         break;
                     }
                 }
+            }
+        }
+    }
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            if(arr_simulate[i][j] > 1){
+                arr_simulate[i][j] = 0;
             }
         }
     }
