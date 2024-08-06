@@ -20,7 +20,7 @@ int main() {
     int row = 0;
     while(true){
         for(int i=0; i<m; i++){
-            if(arr[row+1][k+i] == 1){
+            if(arr[row][k+i] == 1 || row >= n){
                 isEnd = true;
             }
         }
@@ -31,7 +31,7 @@ int main() {
     }
 
     for(int i=0; i<m; i++){
-        arr[row][k+i] = 1;
+        arr[row-1][k+i] = 1;
     }
 
     for(int i=0; i<n; i++){
