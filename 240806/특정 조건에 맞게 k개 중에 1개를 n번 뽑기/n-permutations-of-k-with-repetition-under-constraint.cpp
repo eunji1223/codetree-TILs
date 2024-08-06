@@ -19,10 +19,24 @@ void Choose(int curr_num){
     }
 
     for(int i=1; i<=k; i++){
-        if(curr_num == 1 || numbers.back() != i){
+        if(curr_num <= 2){
             numbers.push_back(i);
             Choose(curr_num+1);
             numbers.pop_back();
+        }
+        else{
+            auto it1 = --numbers.end();
+            auto it2 = it1;
+            --it2;
+
+            if(*it1 == i && *it2 == i){
+                continue;
+            }
+            else{
+                numbers.push_back(i);
+                Choose(curr_num+1);
+                numbers.pop_back();
+            }
         }
     }
 }
