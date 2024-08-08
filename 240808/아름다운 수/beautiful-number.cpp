@@ -12,6 +12,11 @@ bool Count(int num){
         if(*it == num){
             cnt++;
         }
+        else{
+            if(cnt % num != 0)
+                return false;
+            cnt = 0;
+        }
     }
     return (cnt % num == 0);
 }
