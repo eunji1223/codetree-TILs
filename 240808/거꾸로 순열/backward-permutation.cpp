@@ -20,7 +20,7 @@ void Choose(int curr_num){
         return;
     }
 
-    for(int i=2; i>=0; i--){
+    for(int i=n-1; i>=0; i--){
         if(visited[i] == false){
             arr[curr_num] = i+1;
             visited[i] = true;
