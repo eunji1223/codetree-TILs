@@ -12,22 +12,14 @@ int arr[MaxSize] = {0, };
 int arr_Selected[MaxSize] = {0, };
 
 void Calculate_MaxValue(){
-    int value;
-    int index = 0;
+    int value = 0;
+
     for(int i=0; i<n; i++){
         if(arr_Selected[i] == 1){
-            value = arr[i];
-            index = i;
-            break;
+            value ^= arr[i];
         }
     }
 
-    for(int j=index; j<n; j++){
-        if(arr_Selected[j] == 1){
-            value ^= arr[j];
-        }
-    }
-    
     if(value > maxValue){
         maxValue = value;
     }
