@@ -2,12 +2,12 @@
 using namespace std;
 
 bool PrimeNumber(int num){
-    if((num!=2 && num%2==0) || (num!=3 && num%3==0)){
-        return false;
+    for(int i=2; i<num; i++){
+        if(num%i==0){
+            return false;
+        }
     }
-    else{
-        return true;
-    }
+    return true;
 }
 
 bool SumNum(int num){
@@ -37,7 +37,6 @@ int main() {
             count++;
         }
     }
-
     cout << count << endl;
     return 0;
 }
