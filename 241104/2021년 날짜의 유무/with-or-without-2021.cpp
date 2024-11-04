@@ -4,7 +4,7 @@ using namespace std;
 int month_day[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
 bool isExist(int m, int d){
-    if(d <= month_day[m-1]){
+    if( m < 13 && d <= month_day[m-1]){
         return true;
     }
     return false;
@@ -21,6 +21,6 @@ int main() {
     else{
         cout << "No" << endl;
     }
-    
+
     return 0;
 }
