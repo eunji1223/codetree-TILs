@@ -8,14 +8,14 @@ class Student{
 
         Student(){}
 
-        Student(int weight, int height, int num){
-            this->weight = weight;
+        Student(int height, int weight, int num){
             this->height = height;
+            this->weight = weight;
             this->num = num;
         }
 
         void Print(){
-            cout << weight << " " << height << " " << num << endl;
+            cout << height << " " << weight << " " << num << endl;
         }
 };
 
