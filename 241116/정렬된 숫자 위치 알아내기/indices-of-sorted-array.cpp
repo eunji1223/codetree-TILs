@@ -15,6 +15,9 @@ class Number{
 };
 
 bool compare(const Number &num1, const Number &num2){
+    if(num1.num == num2.num){
+        return num1.order < num2.order;
+    }
     return num1.num < num2.num;
 }
 
