@@ -18,7 +18,10 @@ class Info{
         Info(){}
 
         void Print(){
-            cout << name << " " << height << " " << weight << endl;
+            cout << name << " " << height << " ";
+            cout << fixed;
+            cout.precision(1);
+            cout << weight << endl;
         }
 
 };
