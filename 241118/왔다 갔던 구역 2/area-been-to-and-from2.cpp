@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int map[1000] = { 0, };
+int map[2000] = { 0, };
 
 void paint(int current_loc, int size, char dir){
     int dir_num;
@@ -21,7 +21,7 @@ int main() {
     int n;
     cin >> n;
 
-    int current_loc = 500;
+    int current_loc = 1000;
     for(int i=0; i<n; i++){
         int size;
         char dir;
@@ -30,7 +30,7 @@ int main() {
     }
 
     int cnt = 0;
-    for(int i=0; i<1000; i++){
+    for(int i=0; i<2000; i++){
         if(map[i]>1){
             cnt++;
         }
