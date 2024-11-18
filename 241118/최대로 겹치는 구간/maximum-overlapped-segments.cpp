@@ -18,7 +18,7 @@ int main() {
         }
     }
 
-    cout << *max_element(arr+offset, arr+200);
+    cout << *max_element(arr, arr+200);
     
     return 0;
 }
