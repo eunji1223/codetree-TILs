@@ -9,7 +9,7 @@ int main() {
     int digit[20] = {};
     int cnt = 0;
     while(true){
-        if(n<2){
+        if(n<b){
             digit[cnt] = n;
             cnt++;
             break;
