@@ -10,7 +10,7 @@ int tile_black[MAX_SIZE] = { 0, };
 int tile_white[MAX_SIZE] = { 0, };
 char last_tile_color[MAX_SIZE];
 
-int paint(int& current, int size, int dir){
+int paint(int current, int size, int dir){
     for(int i=0; i<size; i++){
         if(dir==1){
             tile_white[current]++;
@@ -33,18 +33,19 @@ int main() {
     cin >> n;
 
     int current = OFFSET;
-    int max_index = 0;
-    int min_index = MAX_SIZE;
+    int max_index = OFFSET;
+    int min_index = OFFSET;
     for(int i=0; i<n; i++){
         int x;
         char dir;
         cin >> x >> dir;
         if(dir == 'L'){
-            paint(current, x, 1); // 흰색 1
+            current = paint(current, x, 1); // 흰색 1
         }
         else if(dir == 'R'){
-            paint(current, x, 2); // 검정색 2
+            current = paint(current, x, 2); // 검정색 2
         }
+
         if(current > max_index){
             max_index = current;
         }
