@@ -28,7 +28,7 @@ int main() {
     int extent = 0;
     for(int i=0; i<n; i++){
         cin >> x1 >> y1 >> x2 >> y2;
-        extent += GetExtent(x1, y1, x2, y2);
+        extent += GetExtent(x1+OFFSET, y1+OFFSET, x2+OFFSET, y2+OFFSET);
     }
     cout << extent; 
     
