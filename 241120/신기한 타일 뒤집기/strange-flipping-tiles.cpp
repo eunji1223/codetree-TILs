@@ -20,13 +20,6 @@ int main() {
         int dir_int = 1;
         char color = 'B';
 
-        if(current < min_index){
-            min_index = current;
-        }
-        if(current > max_index){
-            max_index = current;
-        }
-
         if(dir=='L'){
             dir_int = -1;
             color = 'W';
@@ -35,6 +28,13 @@ int main() {
             map[current] = color;
             if(i!=size-1)
                 current += dir_int;
+        }
+
+        if(current < min_index){
+            min_index = current;
+        }
+        if(current > max_index){
+            max_index = current;
         }
     }
 
