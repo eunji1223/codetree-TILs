@@ -23,7 +23,6 @@ void Erase(int x1, int y1, int x2, int y2){
 
 int main() {
     int x1, y1, x2, y2;
-    int max_x = OFFSET, min_x = MAX_VALUE, max_y = OFFSET, min_y = MAX_VALUE;
     for(int i=0; i<3; i++){
         cin >> x1 >> y1 >> x2 >> y2;
         if(i==2){
@@ -32,24 +31,11 @@ int main() {
         else{
             Paint(x1+OFFSET, y1+OFFSET, x2+OFFSET, y2+OFFSET);
         }
-
-        if(x1 + OFFSET < min_x){
-            min_x = x1 + OFFSET;
-        }
-        if(x2 + OFFSET > max_x){
-            max_x = x2 + OFFSET;
-        }
-        if(y1 + OFFSET < min_y){
-            min_y = y1 + OFFSET;
-        }
-        if(y2 + OFFSET > max_y){
-            max_y = y2 + OFFSET;
-        }
     }
-    
+
     int width = 0;
-    for(int i=min_x; i<max_x+1; i++){
-        for(int j=min_y; j<max_y+1; j++){
+    for(int i=0; i<MAX_VALUE; i++){
+        for(int j=0; j<MAX_VALUE; j++){
             width += map[i][j];
         }
     }
