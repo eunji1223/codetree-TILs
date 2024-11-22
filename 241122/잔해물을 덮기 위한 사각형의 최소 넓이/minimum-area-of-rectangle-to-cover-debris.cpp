@@ -36,7 +36,6 @@ int main() {
     for(int i=0; i<MAX_VAL; i++){
         for(int j=0; j<MAX_VAL; j++){
             if(map[i][j] == 1){
-                cout << i << " " << j << endl;
                 if(j > max_length_heigh){
                     max_length_heigh = j;
                 }
@@ -52,7 +51,7 @@ int main() {
             }
         }
     }
-    
+
     int result;
     if(max_length_heigh==0 && max_length_width==0 && min_length_heigh==MAX_VAL && min_length_width==MAX_VAL){
         result = 0;
