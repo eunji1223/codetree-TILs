@@ -55,7 +55,7 @@ int main() {
             if(memory_a[i]==memory_b[i]){
                 cnt++;
             }
-            else if(min_time < i && memory_b[i] && memory_a[min_time]==memory_b[i]){
+            else if(min_time < i && memory_a[min_time]==memory_b[i]){
                 cnt++;
             }
             else if(min_time < i && memory_a[i]==memory_b[min_time]){
