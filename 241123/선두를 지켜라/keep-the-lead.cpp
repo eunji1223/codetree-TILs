@@ -36,9 +36,15 @@ int main() {
     int arr_b[arr_int+1] = { 0, };
     Run(m, arr_b, v_b, t_b);
 
-    int first = 0;
+    int first = arr_int+1;
     int change_cnt = 0;
-    for(int i=2; i<arr_int+1; i++){
+    for(int i=0; i<arr_int+1; i++){
+        if(arr_a[i]!=arr_b[i]){
+            first = i;
+            break;
+        }
+    }
+    for(int i=first+1; i<arr_int+1; i++){
         if((arr_b[i-1] <= arr_a[i-1] && arr_b[i] > arr_a[i]) || (arr_b[i-1] >= arr_a[i-1] && arr_b[i] < arr_a[i])){
             change_cnt++;
         }
